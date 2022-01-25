@@ -16,7 +16,7 @@
 
 body, html {
     width: 100%;
-    background-image: url(bckg.png);
+    background-image: url(img/bckg.png);
 }
 
 /*------------------------------ENCABEZADO---------------------------------*/
@@ -25,7 +25,7 @@ header {
     position: fixed; right: 0; z-index: 3;
 	overflow: hidden; 
 
-    background-image: url(bckg.png);
+    background-image: url(img/bckg.png);
     width: 100%;
     padding-left: 1%;
     padding-right: 1%;
@@ -128,7 +128,7 @@ main section h2 {
 #imgFondo {
     /* border: 1px solid black; */
     margin: 0 auto;
-    background-image: url(anabelLogos/yoda1.png);
+    background-image: url(img/yoda1.png);
     background-position:center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -162,7 +162,8 @@ footer a:hover {color: #000;}
 @media screen and (max-width: 800px) {
     
     body, html, header {
-        background-image: url(bckgVh.png);
+        background-image: url(img/bckgVh.png);
+        
     }
     .contenedor {
         flex-direction: column; 
@@ -208,7 +209,7 @@ footer a:hover {color: #000;}
     #imgFondo {
         /* border: 1px solid black; */
         margin: 0 auto;
-        background-image: url(anabelLogos/yoda1.png);
+        background-image: url(img/yoda1.png);
         background-position:center;
         background-repeat: no-repeat;
         background-size: contain;
