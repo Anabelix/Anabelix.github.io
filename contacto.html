@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="css.css" type="text/css" rel="stylesheet">
+    <link href="contacto.css" type="text/css" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/icono-01.png" alt="icono anabel"><span>Anabelixx Arts</span></img></a>
+        <nav>
+            <ul>
+                <li><a href="sobremi.html">Sobre mi</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="#">Diseño</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <main>
+            <section>
+                <h1>Contacto</h1>
+                   <form name="formulario" method="post" action="/send.php">
+                    <fieldset>
+                        <label> Nombre<span>*</span><br>
+                            <input type="text" name="nombre" spellcheck="true" required pattern="/^[a-zA-Z]{3,10}*$/">
+                            </label>
+                              
+                            <label> Email<span>*</span><br>
+                            <input type="email" name="correo" required pattern="^([a-z0-9\-\._]+)@([a-z0-9]+)\.([a-z]{2,4})$">
+                            </label><br>
+                    </fieldset>  
+                    
+                    <label> Asunto<span>*</span><br>
+                    <input type="text" name="asunto" spellcheck="true" required>
+                    </label><br>
+                    <label> Mensaje<span>*</span><br>
+                    <textarea name="mensaje" rows="10" placeholder="Escriba su texto..."></textarea>
+                    </label><br>
+                    <button type="submit">Enviar</button>
+                   </form>
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        <p class="txtft">© 2022 by Anabelix</p>
+        <p class="txtft">651081722&nbsp;&nbsp;&nbsp;
+        <a href="mailto:anabelpedrajas@hotmail.com?subject=Solicitar%20información" class="txtft">anabelpedrajas@hotmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>
