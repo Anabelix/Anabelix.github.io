@@ -1,0 +1,104 @@
+main section {
+    /* border: 1px solid black; */
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3%;
+}
+main section:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.foto {
+    /* border: 1px solid black; */
+    /* background-image: url(../img/yoda1.png); */
+    background-color: #FFF;
+    border-radius: 25px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30vh;
+    height: 30vh;
+    float:left;
+    margin-right: 2%;
+}
+#img01 {
+    background-image: url(../img/numerosprimos.jpg);
+}
+#img02 {
+    background-image: url(../img/metamorfosis.png);
+}
+#img03 {
+    background-image: url(../img/momentos.jpg);
+}
+section:nth-child(even) .foto {
+    float: right;
+    margin-right: 0;
+    margin-left: 2%;
+}
+
+h1 {
+    margin-bottom: 2%;
+}
+.b_texto {
+    /* border: 1px solid black; */
+    width:100%;
+}
+.b_texto p {
+    margin-bottom: 2%;
+}
+.more {
+    background-color: #0066FF;
+    padding: 1%;
+    width: 15%;
+    border-radius: 10px;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.more:hover {
+    box-shadow: 5px 5px 1px 1px rgba(255, 255, 255, 1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+@media screen and (max-width: 800px) {
+    main {
+        margin-top: 20%;
+    }
+    main section {
+        flex-direction: column;
+        padding: 5%;
+    }
+    .foto {
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 2%;
+    }
+    .b_texto {
+        width: 100%;
+    }
+    .more {
+        width:25%;
+        padding: 2%;
+    }
+}
+@media screen and (max-width: 425px) {
+    main {
+        margin-top: 35%;
+    }
+    .b_texto > p {
+        /* border: 1px solid black; */
+        white-space:nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        -webkit-line-clamp: 3;
+    }
+}

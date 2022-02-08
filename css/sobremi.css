@@ -1,0 +1,223 @@
+/*-------------------------------------CUERPO-----------------------------------------*/
+main section {
+  margin-bottom: 2%; 
+  padding-bottom: 2%;
+}
+main section:first-of-type {
+  margin-bottom: 7%;
+}
+main section img {
+  /* border: 1px solid black;  */
+  width: 30%; 
+  float: left;
+}
+
+main section:first-of-type p {
+  /* border: 1px solid black;  */
+  width: 70%; 
+  display: inline-flex; 
+  padding: 2%;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.caja h2 {
+  color:#0066FF; 
+  font-size: 30px; 
+  margin-bottom: 3%;
+}
+
+h3 {
+  margin-top: 3%; 
+  margin-bottom: 3%;
+}
+
+main .caja {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+}
+
+#caja_01 {
+  margin-right: 2%;
+}
+
+#caja_01, #caja_02, section:last-child {
+  /* border: 1px solid black; */
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 3%;
+}
+
+section:last-child {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+table, td, th {
+  padding: 2%;
+  width:100%;
+  border-collapse: collapse;
+}
+
+th {   
+  font-size: 20px;
+  font-weight: 700;
+  color: #0066FF;
+}
+
+td {
+  width: 50%;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #0066FF;
+  border: 3px solid #FFF;
+}
+
+.barra {
+  width:100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input[type=range] {
+  height: 41px;
+  -webkit-appearance: none;
+  /* margin: 10px 0; */
+  width: 100%;
+  }
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #071E5E;
+  background: #0066FF;
+  border-radius: 50px;
+  border: 1px solid #0066FF;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 4px #3E5966;
+  border: 1px solid #0066FF;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: #7ACAFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #0066FF;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #071E5E;
+  background: #0066FF;
+  border-radius: 50px;
+  border: 1px solid #0066FF;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 2px 2px 4px #3E5966;
+  border: 1px solid #0066FF;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: #7ACAFF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #0066FF;
+  border: 1px solid #0066FF;
+  border-radius: 100px;
+  box-shadow: 2px 2px 3px #071E5E;
+}
+input[type=range]::-ms-fill-upper {
+  background: #0066FF;
+  border: 1px solid #0066FF;
+  border-radius: 100px;
+  box-shadow: 2px 2px 3px #071E5E;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 2px 2px 4px #3E5966;
+  border: 1px solid #0066FF;
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: #7ACAFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #0066FF;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #0066FF;
+}
+
+/*--------------------------------------RESPONSIVE-------------------------------------*/
+@media screen and (max-width: 800px) {
+  header {
+    background:#d1fff5;
+  }
+
+  img {width:15%;}
+
+  main {
+    margin-top: 20%;
+  }
+  main section:first-of-type p {
+    width: 70%;
+  }
+  h1 {font-size: 30px;}
+
+  .caja h2 {font-size: 25px;}
+    
+  main section:last-child {
+    padding: 5%
+  }
+
+  td {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    margin-top: 40%;
+    }
+  main:first-child section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main section:first-of-type p {
+    width: 100%;
+  }
+  main .caja {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #caja_01 {margin-bottom: 5%;}
+
+  #caja_01, #caja_02 {padding: 10%;}
+}

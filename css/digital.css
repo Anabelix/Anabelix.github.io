@@ -1,0 +1,142 @@
+main section {
+    /* border: 1px solid black; */
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    margin-bottom: 10%;
+}
+
+.imagenes {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 75%;
+}
+
+.foto {
+    /* border: 1px solid blue; */
+    
+    filter: saturate(0.7);
+    transition: 0.5s ease-in-out;
+    background-color: #FFF;
+    border-radius: 25px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1);
+    width: 30vh;
+    height: 30vh;
+    margin-right: -5%;
+}
+.foto:hover {
+    filter: saturate(1);
+    transition: 0.5s ease-in-out;
+}
+#img01 {
+    background-image: url(../img/MRWONDERFUL.gif);
+}
+#img02 {
+    background-image: url(../img/STICKERS_GIF0001.gif);
+    background-size: 100%;
+    
+}
+#img03 {background-image: url(../img/LVR.gif);}
+#img04 {background-image: url(../img/casagiratoria.jpg);}
+#img05 {background-image: url(../img/cactus.jpg);}
+#img06 {background-image: url(../img/colibri.png);}
+.b_texto {
+    /* border: 1px solid red; */
+    /* margin-right: 2%; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+h1 {
+    /* border: 1px solid black; */
+    font-size: 80px;
+    line-height: 0.8;
+    margin-bottom: 10%;
+}
+
+.more {
+    background-color: #0066FF;
+    padding: 5%;
+    margin-top: 1%;
+    width:fit-content;
+    border-radius: 10px;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.more:hover {
+    box-shadow: 5px 5px 1px 1px rgba(255, 255, 255, 1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+/*------------------------------FOTOS IMPARES------------------------------*/
+.foto:nth-child(odd) {
+    transform: rotate(7deg);
+    transition: 0.5s ease-in-out;
+    margin-top: 10%;
+}
+.foto:nth-child(odd):hover {
+    transform: rotate(-7deg);
+    transition: 0.5s ease-in-out;
+}
+
+/*------------------------------FOTOS PARES------------------------------*/
+.foto:nth-child(even) {
+    transform: rotate(-7deg);
+    transition: 0.5s ease-in-out;
+}
+.foto:nth-child(even):hover {
+    transform: rotate(7deg);
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        margin-top: 20%;
+    }
+    main section {
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+    section h1 {
+        font-size: 80px;
+    }
+    .b_texto {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 3%;
+    }
+    .more {
+        display: none;
+    }
+    .imagenes {
+        width: 100%;
+    }
+    .foto {
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        margin-top: 35%;
+    }
+    section h1 {
+        font-size: 40px;
+    }
+}
