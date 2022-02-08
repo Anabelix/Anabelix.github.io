@@ -1,0 +1,72 @@
+section {
+    width: 64%;
+    background-color: #FFF;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.imagen_art {
+    background-image: url(img/yoda1.png);
+    background-size: contain;
+    background-color: grey;
+    margin-bottom: 2%;
+    height: 20vh;
+}
+h1 {
+    /* border-bottom: 1px solid black; */
+    margin-bottom: 1%;
+}
+
+aside {
+    /* border: 1px solid black; */
+    width: 20%;
+    background-color: #FFF;
+    float: right;
+    position: fixed;
+    right: 21%;
+    
+}
+aside h1 {
+    background-color: #0066FF;
+    color: #FFF;
+    text-align: center;
+    padding: 1%;
+}
+aside ul {
+    display: block;
+    
+}
+aside li {
+    /* border-bottom: 1px solid black; */
+    padding: 1%;
+}
+
+aside a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        margin-top: 20%;
+    }
+    section {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    section>p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    aside {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    main {
+        margin-top: 10%;
+    }
+}
