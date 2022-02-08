@@ -7,7 +7,12 @@ main section {
     border-radius: 25px;
     margin-bottom: 10%;
 }
-
+audio::-webkit-media-controls-panel{
+    /* background: rgb(255,255,255);
+background: linear-gradient(127deg, rgba(255,255,255,1) 0%, rgba(255,235,224,1) 13%, rgba(255,171,251,1) 31%, rgba(216,170,255,1) 49%, rgba(150,200,245,1) 66%, rgba(91,255,252,1) 82%, rgba(193,255,242,1) 94%); */
+background: rgb(255,211,241);
+background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 100%);
+}
 .imagenes {
     /* border: 1px solid blue; */
     display: flex;
