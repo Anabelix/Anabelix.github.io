@@ -4,19 +4,39 @@ section {
     padding: 2%;
     margin-bottom: 2%;
 }
-
+section a {
+    text-decoration: none;
+    color:#000;
+}
+section a h1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 2%;
+}
 .imagen_art {
     background-image: url(../img/yoda1.png);
-    background-size: contain;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: grey;
     margin-bottom: 2%;
     height: 20vh;
 }
-h1 {
-    /* border-bottom: 1px solid black; */
-    margin-bottom: 1%;
+#img01 {
+    background-image: url(../img/av_header.jpg);
+    background-position-x: center;
 }
-
+#img02 {
+    background-image: url(../img/tdsaf_header.png);
+    background-position-y: 30%;
+}
+#img03 {
+    background-image: url(../img/tftl_header.jpg);
+    background-position-y: 40%;
+}
+#img04 {
+    background-image: url(../img/calm_header.jpg);
+    background-position-y: 40%;
+}
 aside {
     /* border: 1px solid black; */
     width: 20%;

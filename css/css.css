@@ -25,10 +25,13 @@ header {
     /* border: 1px solid black; */
     position: fixed; right: 0; z-index: 3;
 	overflow: hidden; 
-
-    /* background-image: url(img/header.png); */
+    
+    
     /* background: #FFF; */
-    /* background: linear-gradient(127deg, rgba(255,255,255,1) 0%, rgba(255,235,224,1) 13%, rgba(255,171,251,1) 31%, rgba(216,170,255,1) 49%, rgba(150,200,245,1) 66%, rgba(91,255,252,1) 82%, rgba(193,255,242,1) 94%); */
+    /* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(255, 255, 255)100%); */
+    /* background: linear-gradient(127deg, rgba(255,255,255,0.2) 0%, rgba(255,235,224,0.2) 13%, rgba(255,171,251,0.2) 31%, rgba(216,170,255,0.2) 49%, rgba(150,200,245,0.2) 66%); */
+    /*background: linear-gradient(127deg, rgba(255,255,255,0.5) 0%, rgba(255,235,224,0.5) 13%, rgba(255,171,251,0.5) 31%, rgba(216,170,255,0.5) 49%, rgba(150,200,245,0.5) 66%, rgba(91,255,252,0.5) 82%, rgba(193,255,242,0.5) 94%); */
+    backdrop-filter: blur(10px);
     /* background-size: cover; */
     width: 100%;
     padding-left: 1%;

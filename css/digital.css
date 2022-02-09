@@ -37,7 +37,7 @@ background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 
     margin-right: -5%;
 }
 .foto:hover {
-    filter: saturate(1);
+    filter: saturate(1.2);
     transition: 0.5s ease-in-out;
 }
 #img01 {

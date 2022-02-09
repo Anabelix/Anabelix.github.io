@@ -1,0 +1,31 @@
+.imagen_art {
+    background-image: url(../img/av_header.jpg);
+}
+
+#pic1 {
+    background-image: url(../img/av_mk1.png);
+    transition: 0.5s ease-in-out;
+}
+#pic1:hover {
+    background-image: url(../img/av_pc1.png);
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
+#pic2 {
+    background-image: url(../img/av_mk2.png);
+    transition: 0.5s ease-in-out;
+}
+#pic2:hover {
+    background-image: url(../img/av_pc2.png);
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
+#pic3 {
+    background-image: url(../img/av_mk3.png);
+    transition: 0.5s ease-in-out;
+}
+#pic3:hover {
+    background-image: url(../img/av_pc3.png);
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
