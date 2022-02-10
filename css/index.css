@@ -1,3 +1,9 @@
+body, html {
+    overflow: hidden;
+}
+main {
+    height: 82vh;
+}
 #imgFondo h1 {
     color:#0066FF; font-size: 40px;
     transform: translateY(350%);
@@ -41,7 +47,7 @@ main section h2 {
     #imgFondo h2 {
         font-size: 40px; 
         line-height: 30px;
-        transform: translateY(500%);
+        transform: translateY(400%);
     }
     .irrss {
         width: 7%; 

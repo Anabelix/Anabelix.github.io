@@ -1,3 +1,9 @@
+body, html {
+    overflow: hidden;
+}
+main {
+    height: 82vh;
+}
 section {
     display: flex;
     flex-direction: column;

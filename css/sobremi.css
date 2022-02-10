@@ -58,7 +58,9 @@ section:last-child {
   flex-basis: 100%;
   justify-content: center;
 }
-
+iframe {
+  margin-top: 2%;
+}
 table, td, th {
   padding: 2%;
   width:100%;
@@ -174,10 +176,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 /*--------------------------------------RESPONSIVE-------------------------------------*/
 @media screen and (max-width: 800px) {
-  header {
-    background:#d1fff5;
-  }
-
   img {width:15%;}
 
   main {
