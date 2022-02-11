@@ -134,6 +134,7 @@ h1 {
     }
     .foto {
         height: 20vh;
+        background-size: cover;
     }
 }
 

@@ -6,13 +6,14 @@ main section {
     justify-content: space-around;
     align-items: center;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px 1px rgba(109, 0, 60, 0.1);
     margin-bottom: 3%;
 }
 main section:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(190, 30, 118, 0.3);
+    filter: saturate(1.3);
 }
-.foto {
+.foto, video {
     /* border: 1px solid black; */
     /* background-image: url(../img/yoda1.png); */
     background-color: #FFF;
@@ -25,21 +26,28 @@ main section:hover {
     float:left;
     margin-right: 2%;
 }
+video {
+    background-color: black;
+}
+
 #img01 {
-    background-image: url(../img/numerosprimos.jpg);
+    background-image: url(../img/primos.png);
 }
-#img02 {
+/* #img02 {
     background-image: url(../img/metamorfosis.png);
-}
+} */
 #img03 {
     background-image: url(../img/momentos.jpg);
 }
+#img04 {
+    background-image: url(../img/rabia.jpg);
+}
+/*Pares*/
 section:nth-child(even) .foto {
     float: right;
     margin-right: 0;
     margin-left: 2%;
 }
-
 h1 {
     margin-bottom: 2%;
 }
