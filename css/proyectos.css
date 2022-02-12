@@ -85,7 +85,7 @@ h1 {
         flex-direction: column;
         padding: 5%;
     }
-    .foto {
+    .foto, video {
         width: 100%;
         height: 10vh;
         margin-bottom: 2%;

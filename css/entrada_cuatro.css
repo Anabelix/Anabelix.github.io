@@ -1,0 +1,40 @@
+.imagen_art {
+    background-image: url(../img/calm_header.jpg);
+    background-position-y: 40%;
+}
+
+.pic {
+    background-size: cover;
+    background-position: center;
+    width: 18vh;
+    height: 25vh;
+}
+
+#pic1 {
+    background-image: url(../img/calm_pc1.jpg);
+    transition: 0.5s ease-in-out;
+}
+#pic1:hover {
+    width: 30vh;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
+#pic2 {
+    background-image: url(../img/calm_pc2.jpg);
+    transition: 0.5s ease-in-out;
+}
+#pic2:hover {
+    width: 30vh;
+    height: 30vh;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
+#pic3 {
+    background-image: url(../img/calm_pc3.jpg);
+    transition: 0.5s ease-in-out;
+}
+#pic3:hover {
+    width: 30vh;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}

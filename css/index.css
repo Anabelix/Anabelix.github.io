@@ -1,6 +1,6 @@
-body, html {
+/* body, html {
     overflow: hidden;
-}
+} */
 main {
     height: 82vh;
 }
@@ -30,8 +30,14 @@ main section h2 {
 }
 
 .irrss {
-    width: 3.5%; 
-    margin-top: 18%
+    width: 4%; 
+    margin-top: 18%;
+    margin-right: 1%;
+    padding: 0.25%;
+    filter: invert(1);
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 800px) {

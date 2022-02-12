@@ -12,14 +12,13 @@ section:first-child {
 }
 
 section:first-child img {
-    width: 25%;
+    width: 30%;
     float: left;
-    margin-right: 2%;
+    margin-right: 1%;
 }
 
-section:first-child p:last-child {
-    color: rgb(48, 48, 48);
-    text-align: right;
+section:first-child p {
+    text-align: left;
 }
 section h1 {
     margin-bottom: 1%;
@@ -79,8 +78,10 @@ section a:hover {
 
 section:last-child {
     display: flex;
+    flex-direction: column;
     flex-basis: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 table, td, th {

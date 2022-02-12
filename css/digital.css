@@ -1,5 +1,4 @@
 main section {
-    /* border: 1px solid black; */
     padding: 3%;
     display: flex;
     justify-content: space-around;
@@ -14,7 +13,6 @@ background: rgb(255,211,241);
 background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 100%);
 }
 .imagenes {
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -22,8 +20,6 @@ background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 
 }
 
 .foto {
-    /* border: 1px solid blue; */
-    
     filter: saturate(0.7);
     transition: 0.5s ease-in-out;
     background-color: #FFF;
@@ -41,20 +37,20 @@ background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 
     transition: 0.5s ease-in-out;
 }
 #img01 {
-    background-image: url(../img/MRWONDERFUL.gif);
+    background-image: url(../img/motion_pc1.gif);
 }
 #img02 {
-    background-image: url(../img/STICKERS_GIF0001.gif);
+    background-image: url(../img/motion_pc2.gif);
     background-size: 100%;
-    
 }
-#img03 {background-image: url(../img/LVR.gif);}
+#img03 {
+    background-image: url(../img/motion_pc3.gif);
+    background-size: cover;
+}
 #img04 {background-image: url(../img/casagiratoria.jpg);}
 #img05 {background-image: url(../img/cactus.jpg);}
 #img06 {background-image: url(../img/colibri.png);}
 .b_texto {
-    /* border: 1px solid red; */
-    /* margin-right: 2%; */
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -62,7 +58,6 @@ background: linear-gradient(127deg, rgba(255,211,241,1) 9%, rgba(249,170,255,1) 
 }
 
 h1 {
-    /* border: 1px solid black; */
     font-size: 80px;
     line-height: 0.8;
     margin-bottom: 10%;
