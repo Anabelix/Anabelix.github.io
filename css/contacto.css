@@ -1,6 +1,3 @@
-body, html {
-    overflow: hidden;
-}
 main {
     height: 82vh;
 }
@@ -61,7 +58,10 @@ input, textarea {
 }
 
 input:valid {border: 1px solid #34A641;}
-
+footer {
+    position: absolute;
+    bottom: 0;
+}
 @media screen and (max-width: 800px) {
     main {
         margin-top: 30%;
