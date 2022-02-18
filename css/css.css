@@ -181,11 +181,7 @@ footer a:hover {color: #000;}
     }
     .irrss {width: 10%; margin-top: 42%} */
 }
-@media screen and (orientation: landscape) {
-    .contenedor {
-        width: 90%;
-    }
-}
+
 @media screen and (max-width: 425px) {
     main {margin-top: 20%;}
     footer {

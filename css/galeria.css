@@ -16,7 +16,7 @@ div .galeria {
 div .galeria div {
     opacity: 0;
     transition: opacity 0.5s;
-    border: 1px solid #FFF;
+    /* border: 1px solid #FFF; */
     width: 70vh;
     height: 70vh;
     background-size: contain;
@@ -72,29 +72,28 @@ div .galeria div:target {
     opacity: 1;
     z-index: 2;
 }
-@media screen and (max-width: 800px){
-   main {
-        margin-top: 25%;
-        padding: 3%;
-   }
-}
-@media screen and (orientation: landscape) {
-    main {
-        margin-top: 7%;
-        padding: 3%;
-   }
-   .menu {
-       margin-bottom: 1%;
-   }
-}
 
-@media screen and (max-width:450px)  {
+@media screen and (max-width: 800px){
     main {
-        margin-top: 30%;
+         margin-top: 25%;
+         padding: 3%;
+    }
+ 
+    div .galeria div {
+        height: 60vh;
+        /* background-size: 70%; */
+    }
+ }
+
+ @media screen and (max-width:450px)  {
+    main {
+        margin-top: 35%;
     }
     .menu {
         width:100%;
+        margin-top: 10%;
+        margin-bottom: 7%;
     }
-
+   
     
 }

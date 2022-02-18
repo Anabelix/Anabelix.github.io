@@ -33,3 +33,28 @@ div .galeria div {
     background-image: url(../img/motion_pc7.gif);
     transform: translateX(-140vh);
 }
+
+@media screen and (max-width: 800px){
+    main {
+         margin-top: 25%;
+         padding: 3%;
+    }
+ 
+    div .galeria div {
+        height: 60vh;
+        background-size: 70%;
+    }
+ }
+
+ @media screen and (max-width:450px)  {
+    main {
+        margin-top: 35%;
+    }
+    .menu {
+        width:100%;
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+   
+    
+}
