@@ -122,8 +122,9 @@ h1 {
         margin-bottom: 3%;
     }
     .more {
-        display: none;
+        margin-bottom: 1%;
     }
+   
     .imagenes {
         width: 100%;
     }
@@ -132,12 +133,19 @@ h1 {
         background-size: cover;
     }
 }
-
+@media screen and (orientation: landscape) {
+    .foto {
+        background-size: cover;
+    }
+}
 @media screen and (max-width: 425px) {
     main {
         margin-top: 35%;
     }
     section h1 {
         font-size: 40px;
+    }
+    .more {
+        margin-bottom: 3%;
     }
 }

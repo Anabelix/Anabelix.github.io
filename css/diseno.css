@@ -85,6 +85,15 @@ aside a {
         display: none;
     }
 }
+@media screen and (orientation: landscape) {
+    aside {
+        right: 7%;
+        width:27%;
+    }
+    aside a {
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 425px) {
     main {
         margin-top: 35%;

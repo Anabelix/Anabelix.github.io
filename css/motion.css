@@ -1,0 +1,35 @@
+div .galeria div {
+    opacity: 0;
+    transition: opacity 0.5s;
+    border: 1px solid #FFF;
+    background-color: #FFF;
+    width: 70vh;
+    height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#fotito01 {
+    background-image: url(../img/motion_pc4.gif);
+    transform: translateX(140vh);
+}
+#fotito02 {
+    background-image: url(../img/motion_pc5.gif);
+    transform: translateX(70vh);
+    background-color: #FFF;
+}
+#fotito03 {
+    background-image: url(../img/motion_pc6.gif);
+    background-size: cover;
+}
+#fotito04 {
+    background-image: url(../img/motion_pc2.gif);
+    transform: translateX(-70vh);
+    background-color: rgb(153, 213, 221);
+    background-size: auto;
+}
+#fotito05 {
+    background-image: url(../img/motion_pc7.gif);
+    transform: translateX(-140vh);
+}
