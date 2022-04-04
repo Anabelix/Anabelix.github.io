@@ -26,7 +26,8 @@ main {
 #imgFondo {
     /* border:1px solid black; */
     margin: 0 auto;
-    background-image: url(../img/panditainicio.png);
+    margin-top: -4%;
+    background-image: url(../img/panda_finalLogo.png);
     opacity: 0.95;
     background-position:center;
     background-repeat: no-repeat;
