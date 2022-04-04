@@ -1,0 +1,25 @@
+/* body {
+    width: 100%;
+} */
+/* .contenedor {width: 100%;} */
+.img {
+    width: 70vh;
+    height: 70vh;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#bbdd {
+    background-image: url(../img/bbdd.png);
+}
+.img:nth-child(2) {
+    width: 35vh; height: 35vh; 
+    /* transform:translateX(-80%); */
+    transform:translate(170%,-200%);
+}
+#lupa {
+    background-image: url(../img/notaslupa.png);
+}

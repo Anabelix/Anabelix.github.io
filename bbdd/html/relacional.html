@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/modelo.css" type="text/css" rel="stylesheet">
+    <title>Modelo Relacional</title>
+</head>
+<body>
+    <header>
+        <span>
+            <h1>BASE DE DATOS DE UNA BIBLIOTECA</h1>
+            <h2>Ana Isabel Pedrajas Navarro - DAW1V</h2>
+        </span>
+        
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Introducción</a></li>
+                <li><a href="../html/entidad.html">Modelo E/R</a></li>
+                <li><a href="../html/relacional.html">Modelo Relacional</a></li>
+                <li><a href="#">Scripts</a>
+                    <ul>
+                        <li><a href="../html/creates.html">Creates</a></li>
+                        <li><a href="../html/inserts.html">Inserts</a></li>
+                        <li><a href="../html/listados.html">Listados</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h1 class="titulo_mr">MODELO<br>RELACIONAL</h1>
+        <div class="txt">
+            <p>A partir del modelo E/R se ha diseñado el <strong>modelo relacional</strong> de tal forma que se ha conseguido un diseño más limpio de cómo se estructura el sistema, las entidades que tienen más peso y son las que poseen atributos que se van propagando al resto de entidades. La disposición final de este modelo servirá como guía para la creación de las tablas y la inserción del contenido.</p>
+        </div>
+        <iframe title="Modelo Relacional" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=modelo%20relacional.drawio#R7Vxbd6o4FP41rjXzUBeE%2ByPeepjl7ag9M%2FPURSVVzkFxAFs7v364BCUBVFCKdeKDmk3c5PJ9yWbzYYNrr3aPjr5ZDmwDWg3AGLsG12kAABSZ8z8Cy0dkYUVBiCwLxzQiG3MwTM1%2FIaoYW7emAV1ki0yebVueucGNc3u9hnMPs%2BmOY7%2Fj1V5ty8AMG30BU4bpXLfS1j9Nw1vGrWMO9m%2FQXCzRmRUBHVjpcV1kcJe6Yb8nTFy3wbUd2%2Faib6tdG1rB4OHD0ss5um%2BXA9feOT%2F453tr%2B%2FHqPX7%2FNX9gnfePF%2FPH9wfk5U23tqi%2FDSBavr%2FWJmiy94GGQfxnG7SzZZlr%2BLBE%2FVX9KuBwzP%2B2QJ9W9NnbkDbDfMv068Gd96Bb5mIduf25dT3z9SPfubvR15meXu219%2BCGMArbx2x2aS%2FdjjYbTTS179f4LXb5Eh9ta70GaCe68XI4O4M3YN%2BoBuAUvO%2FJCsPRoDXphk6ZsapNE%2B5z%2FRz32NaeOmon8liqSe1RR3scPY9H05na%2Fz2nUsIczlxFk%2FnifPIJL0PP0WbXMHy0Nwcvs%2B5AzSZ1iPcKeV3KwVNLa6ttbTSkDPz%2FYva%2BeqM%2B%2BVtrGQpetB%2Bq465PxguYuN%2BWT%2F%2F8REv6mjqtmc4Uj7Q3X6E3fa01GWWuFdq0NSy7UmQNx0ybPfVHVyF4r9v%2Bpj5rg%2FEFq03%2F6VGdXOhD62ijINi5QpeGT4PnsfqYGPBg%2BsKrast2sHn1HTHMC2vALExc2g78yqvE9UziYNSD6CBdjmlvaG9Op0Wm7Yk2y16QL1kYEoEfEy3smSzNWuwpc2lvaG9OM%2FeP7mDcVyfdaSZ5g%2F09roIHDGXonI7NTrHYP0NvNBmoM7QIdKcztYO%2BR%2BFUt6PdQBqEQor25iv0ZqaNR8%2FTkc%2BYUrnOTrjRjynhaG9ob87qTT7Xgq0VHc2jWzI3Ge12Q7UdFTvapNsOeBgVZ91%2Btzcaji7fo%2BnlMO0N7c1lvRlPgjh1cP3r4XQ4vg%2BpmZz1BI%2Bw0TKiDbV9RX218Q%2BtX9wNPrz7Bh9daiJ%2FPW2YLHa6P0b9p%2FJRQkr9gStCADYzIJhc3770VpZvYIPZ8xz7F2yjkV3baxiMt2lZhAkhomPB18DDG3Q8c65bKjKvTMMITtJ6X5oenG70eXDGd0cPRsqxt2sDBhIZBk1mT1%2BZVqBWWvkFFzqOHk%2Fz1N464W%2BXnrdxG0AIsCOAXvgWVHCbC9teWFDfmG5zbq%2FCA3M3rNp7jfz6X3HPK%2FtNfwkHIeizA31UJsu2p3uJsgEtmCxDw0wWkQoqYUnLhGLNjz9McJcwIdnQI7RX0HP8ljLxUZmPfoI0XKISFd8TeiggIZnTMiGGkhRk1JEIa7H3fRAq%2BV%2BQVqmAbglk6JYIPMG1oQb6rwNOEtBKTztSnoG43N4T2qdxi%2B1094CMZWAgBVEDvurbaOGJxV6BO%2FcX9OZLVMidD2hgQrT0bCSGW8gY7NjmQEv3zDdcvpY1AegMY9sMVzA02RyDTzbLcLgLN2QB%2BlVSb0Y64k848nRnAb2UoxAP%2B26XhwhHIVIRREAs4YxnlqT5%2BRA54ahiiAgUIpVBRMRmlpNASYiwwnFHFUNEvEmIYHVzQWLo7jI8NYsKY93zoLMOLYA5Gh3cCo5kHEe8yJfEURy05DmqGEcSxVGtUY3MXAdHPJBrxZFMcVQnjgRiOxJEtskkXmw5VAkiV8RtxRhTKMbqxJhCXIH5W9c1MKbIUhG3FWMsfryLgqwekMkywNAgCTyGhpLhuiIKRdxWDbKsx9soyD4PZAIedO%2BD8KKwkpUTjqoGErhJIN1DpoBj8W1JFEsmk3jmhKOqMUITjpVlAURys5LKYYRTTjiqGiM0nVTzYoPPvyyUXWyIW2IpR1UDieaTagUSr4jXAZLA1wwkmlCqN6EknJj%2Fc4Ek1r0i3WbW6B7CHw7gVz%2BCWDL8SacZPzf8AbeZ9LkHjACC%2FrxUNrIhb3CQjqrGyG3mbO4BI%2BnoVyyHETkVtIifi5F0OqY9TqHkckHh3J9I6NsvlRQeBWDwatQjPcwF7PnaQKDkqLwSkBYzIM1VpgxMp2EoNmrCBqG5YBW2ZmzwdG%2BpLEUnNJXECw8igFRyp%2BEIHVnKUdU7TVoiSFeTmlYTQsIDJKnm1SSdg6PYqAkbRBaFk%2BqOQtJpNYqNerDBgZwr49qwkc6UUWzUhQ08Qt3fM64LG1w6Q0axUQ82eBZfNwRRrhkb6cwYxcZtZD0koW5s0IzYrWBDIERv%2B%2BRobdjIyIg1%2FbL6M%2Fm4%2FumH5Fmw2YVDlHqcfXj7SGPBkQTNF0WaLOBZFi4jsuXkz0RaOr9GkXYPSFMAeX1dN9Iy8nIUafeANIaMrISakVZMsjm3dNc1542c2wYhanKT%2FHXM2bl4OqLPSt3eSFLAr2noUH4NhmTh6IYJMf8S1EX4FW5wyBKxBHIln2XgRPKO6XnPMvgI0z8S1TZBBff8BsfnOZAh8njV%2ByVcMV0qZcudskXhwZXYQkQe4Mx%2FkSnKFrLB8XmqZUsx8S1ly52yReAJXSYoyxZGzHrcMiahfN7N86LcITXs8Xmq5U4xvTHlzp1yJ3V7L06FFuUOkBmMO%2FjThECuJkpj%2Bezm57WSrB%2B3q1Ku8cV025Rrd8o1nthQeK6srIvcmRSxKYmKb0fvF3Lt2jIwvpgonRLgTglA5kEltmygJmf%2BL0YsQ5D4En%2FNUviSh%2BiMiBIG1W4lxZ6Sp0wqySTf7Hz8hQYiLPwdFJpAiMudXfJo56PxNYTGPJE%2Bk8tSMKXvkOSmUE2Ml9Pk3BhPJFv2GTFesT9DpcS80y1OZK%2FEL044louQzvwHn6JcI5sfn6ckd%2FyiYwc3Bg%2FVHX2zHNgGDGr8Bw%3D%3D"></iframe>
+    </div>
+</body>
+</html>

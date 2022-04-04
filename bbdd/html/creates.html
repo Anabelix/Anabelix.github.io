@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/creates.css" type="text/css" rel="stylesheet">
+    <title>Creates</title>
+</head>
+<body>
+    <header>
+        <span>
+            <h1>BASE DE DATOS DE UNA BIBLIOTECA</h1>
+            <h2>Ana Isabel Pedrajas Navarro - DAW1V</h2>
+        </span>
+        
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Introducción</a></li>
+                <li><a href="../html/entidad.html">Modelo E/R</a></li>
+                <li><a href="../html/relacional.html">Modelo Relacional</a></li>
+                <li><a href="#">Scripts</a>
+                    <ul>
+                        <li><a href="../html/creates.html">Creates</a></li>
+                        <li><a href="../html/inserts.html">Inserts</a></li>
+                        <li><a href="../html/listados.html">Listados</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h1>CREATES</h1>
+        <div class="txt">
+            <p>Una vez realizada la modelización de los datos que componen nuestra base de datos mediante el diseño del diagrama entidad relación y de la obtención de nuestro esquema relación con el cual hemos podido obtener un modelo lógico de nuestro sistema, pasamos a la elaboración de los scripts que engloban las <strong>sentencias DDL (definición de datos).</strong></p>
+            <p>
+                Mediante las sentencias DDL, definiremos mediante el lenguaje SQL la estructura de nuestra base de datos. Con estas sentencias podremos realizar las tareas de:
+            </p>
+            <ul>
+                <li><strong>CREATE:</strong> Creación de objetos, en este caso realizaremos tablas.</li>
+                <li><strong>DROP:</strong> Eliminación de objetos, más concretamente de las tablas que componen nuestro sistema (con el fin de poder eliminar otras que ya existían con anterioridad y que podrían generar conflicto).</li>
+                <li><strong>ALTER:</strong> Modificación de objetos.</li>
+            </ul>
+            <p>
+                El siguiente código corresponde a las creaciones de las <strong>tablas Editorial, Tema, Autor, Libro, Escrito, Ejemplares, Tipo de socio, Socio y Préstamo.</strong> Antes de comenzar, queremos mencionar que la mayoría de los atributos de nuestra tabla es de tipo <strong>VARCHAR2</strong> y cuyo tamaño varía en función del dato a almacenar ya sea un código (5 caracteres), descripciones, nombres, etc. (40 caracteres) o todo aquel dato numérico con el que no hemos de realizar funciones aritméticas. El resto de los datos son del tipo <strong>NUMBER</strong> o <strong>DATE</strong> si trabajamos con fechas.
+            </p>
+            <p>
+                Para elaborar el script a partir del modelo relacional se han seguido los siguientes pasos:</p>
+                <ul>
+                    <li>Todas las relaciones son ahora tablas.</li>
+                    <li>Los atributos se clasifican y se establece el tipo de dato.</li>
+                </ul>  
+            <p>A la hora de crear una tabla, previamente habíamos escrito la sentencia <strong>DROP TABLE</strong> para poder eliminar las posibles tablas ya existentes. Esta sentencia la completamos con <strong>CASCADE CONSTRAINTS</strong> con el fin de eliminar las restricciones de integridad referencial, es decir, eliminamos la tabla con atributos referenciados por otras tablas y sus referencias.</p>
+            <p>A continuación, <strong>creamos la tabla y establecemos los nombres de los atributos, el tipo de dato, la longitud</strong> si era necesario y si alguna columna no podría tomar valores nulos (restricción de obligatoriedad).</p>
+            <p>Para finalizar, declaramos las <strong>CONSTRAINTS (restricciones)</strong> que pudieran existir al final del bloque como las <strong>PRIMARY KEY, FOREIGN KEY y CHECK.</strong> A todas estas restricciones se les otorgó un nombre propio por el que poder identificarlas rápidamente en caso de realizar alguna modificación posterior (sentencia ALTER TABLE). En el caso de la tabla Ejemplares, para respetar la integridad referencial y la propagación de la clave se ha indicado que la clave ajena (compuesta) proviene de la clave primaria también compuesta de esa misma tabla y el orden en la declaración se ha mantenido igual.</p>
+            <a href="../scripts/CREATES.sql" id="enlace">Enlace al script CREATE</a>
+        </div>
+        
+        <a href="#inst01">EDITORIAL</a>
+        <a href="#inst02">TEMA</a>
+        <a href="#inst03">AUTOR</a>
+        <a href="#inst04">LIBRO</a>
+        <a href="#inst05">ESCRITO</a>
+        <a href="#inst06">EJEMPLARES</a>
+        <a href="#inst07">TIPO_SOCIO</a>
+        <a href="#inst08">SOCIO</a>
+        <a href="#inst09">PRESTAMO</a>
+        <div class="creates_script">
+            <p id="inst01">
+                DROP TABLE <span>EDITORIAL</span> CASCADE CONSTRAINTS;
+                <br>
+                CREATE TABLE <span>EDITORIAL</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CIF</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">EDINB</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">PAIS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CIUDAD</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO_POSTAL</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NUMBER(5),<br>
+                CONSTRAINT pk_editorial <span class="pk">PRIMARY KEY (CIF)</span><br>
+                );
+            </p>
+            <p id="inst02">
+                DROP TABLE <span>TEMA</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>TEMA</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">NOMBRE</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">UBICACION</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20)&nbsp;&nbsp;NOT NULL,<br>
+                CONSTRAINT pk_tema <span class="pk">PRIMARY KEY (CODIGO)</span><br>
+                );
+            </p>
+            <p id="inst03">
+                DROP TABLE <span>AUTOR</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>AUTOR</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">APENOM</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(40)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">PAIS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ALIAS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20),<br>
+                CONSTRAINT pk_autor <span class="pk">PRIMARY KEY (CODIGO)</span><br>
+                );
+            </p>
+            <p id="inst04">
+                DROP TABLE <span>LIBRO</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>LIBRO</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ISBN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">TITULO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(50)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_IMP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">LUGAR_IMP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(20),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">IDIOMA</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(10)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">NUM_PAG</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NUMBER,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CIF</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(9),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                CONSTRAINT pk_libro <span class="pk">PRIMARY KEY (ISBN),</span><br>
+                CONSTRAINT fk_libro1 <span class="fk">FOREIGN KEY (CIF)</span> REFERENCES EDITORIAL (CIF) ON DELETE CASCADE,<br>
+                CONSTRAINT fk_libro2 <span class="fk">FOREIGN KEY (CODIGO)</span> REFERENCES TEMA (CODIGO) ON DELETE CASCADE<br>
+                );
+            </p>
+            <p id="inst05">
+                DROP TABLE <span>ESCRITO</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>ESCRITO</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ISBN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                CONSTRAINT pk_escrito <span class="pk">PRIMARY KEY (CODIGO, ISBN),</span><br>
+                CONSTRAINT fk_escrito1 <span class="fk">FOREIGN KEY (ISBN)</span> REFERENCES LIBRO (ISBN) ON DELETE CASCADE,<br>
+                CONSTRAINT fk_escrito2 <span class="fk">FOREIGN KEY (CODIGO)</span> REFERENCES AUTOR (CODIGO) ON DELETE CASCADE<br>
+                );
+            </p>
+            <p id="inst06">
+                DROP TABLE <span>EJEMPLARES</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>EJEMPLARES</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ISBN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FORMATO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(10)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ESTADO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(50),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_EDICION</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOT NULL,<br>
+                CONSTRAINT pk_ejemplares <span class="pk">PRIMARY KEY (ISBN, NUM_EJEMPLAR),</span><br>
+                CONSTRAINT fk_ejemplares1 <span class="fk">FOREIGN KEY (ISBN, NUM_EJEMPLAR)</span> REFERENCES EJEMPLARES (ISBN,NUM_EJEMPLAR) ON DELETE CASCADE<br>
+                );
+            </p>
+            <p id="inst07">
+                DROP TABLE <span>TIPO_SOCIO</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>TIPO_SOCIO</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">DESCRIPCION</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(30)&nbsp;&nbsp;NOT NULL,<br>
+                CONSTRAINT pk_tsocio <span class="pk">PRIMARY KEY (CODIGO),</span><br>
+                CONSTRAINT c_socio1 CHECK (DESCRIPCION IN('INFANTIL','ADULTO','INSTITUCIONAL'))<br>
+                );
+            </p>
+            <p id="inst08">
+                DROP TABLE <span>SOCIO</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>SOCIO</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">NUM_SOCIO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">APENOM</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(40)&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_NAC</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">DIRECCION</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(30),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">TELEFONO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(10),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">CODIGO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                CONSTRAINT pk_socio <span class="pk">PRIMARY KEY (NUM_SOCIO),</span><br>
+                CONSTRAINT fk_socio1 <span class="fk">FOREIGN KEY (CODIGO)</span> REFERENCES TIPO_SOCIO (CODIGO) ON DELETE CASCADE<br>
+                );
+            </p>
+            <p id="inst09">
+                DROP TABLE <span>PRESTAMO</span> CASCADE CONSTRAINTS;<br>
+                CREATE TABLE <span>PRESTAMO</span> (<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">NUM_EJEMPLAR</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NUMBER,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">ISBN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">NUM_SOCIO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR(5),<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_INICIO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_FIN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOT NULL,<br>
+                &nbsp;&nbsp;&nbsp;<span class="var">FECHA_DEVOLUCION</span>&nbsp;&nbsp;DATE,<br>
+                CONSTRAINT pk_prestamo <span class="pk">PRIMARY KEY (NUM_EJEMPLAR, ISBN, NUM_SOCIO, FECHA_INICIO),</span><br>
+                CONSTRAINT fk_prestamo1 <span class="fk">FOREIGN KEY (ISBN,NUM_EJEMPLAR)</span> REFERENCES EJEMPLARES (ISBN,NUM_EJEMPLAR) ON DELETE CASCADE,<br>
+                CONSTRAINT fk_prestamo2 <span class="fk">FOREIGN KEY (NUM_SOCIO)</span> REFERENCES SOCIO (NUM_SOCIO) ON DELETE CASCADE<br>
+                );
+            </p>
+        </div>
+    </div>
+</body>
+</html>

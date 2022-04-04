@@ -1,0 +1,27 @@
+﻿REM ****** Nombre: ListadoMorosos.sql ******
+REM ****** Descripcion: Informe sobre los socios que son morosos ******
+CLEAR SCREEN
+CLEAR BREAKS
+CLEAR COMPUTES
+CLEAR COLUMNS
+
+SET LINESIZE 60
+SET PAGESIZE 24
+SET HEADSEP |
+
+TTITLE '===================================================================|LISTADO DE MOROSOS|==================================================================='
+COLUMN APENOM HEADING 'Nombre del socio' 
+COLUMN APENOM FORMAT A27
+COLUMN APENOM TRUNCATED
+
+COLUMN TELEFONO HEADING 'Telefono'
+
+BREAK ON APENOM SKIP 1
+
+SPOOL ListadoMorosos.lst
+
+SELECT SOCIO.APENOM, SOCIO.TELEFONO FROM SOCIO, PRESTAMO
+WHERE SOCIO.NUM_SOCIO=PRESTAMO.NUM_SOCIO 
+AND FECHA_DEVOLUCION>=FECHA_FIN
+GROUP BY SOCIO.APENOM, SOCIO.TELEFONO
+ORDER BY SOCIO.APENOM;

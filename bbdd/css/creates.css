@@ -1,0 +1,72 @@
+.contenedor {
+    padding: 2%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contenedor > h1 {
+    color:  #c2fdff;
+    color: rgb(255, 255, 255);
+    text-shadow:-2px 2px 2px rgba(16, 16, 16, 0.356);
+    width:100%;
+    padding-left: 2%;
+    /* border:1px solid black; */
+    font-size: 4rem;
+    margin-bottom: 2%;
+}
+
+.contenedor li {
+    list-style-type: disc;
+    margin-left: 7%;
+}
+.txt {
+    height: fit-content;
+    border-radius: 25px;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 2%;
+    margin-right: 1%;
+}
+.txt > * {
+    text-align: justify;
+    margin-bottom: 2%;
+    line-height: normal;
+}
+#enlace {
+    background-color: #ff7b00;
+    border-radius: 15px;
+    padding: 1%;
+    width: fit-content;
+}
+.contenedor a, .creates_script p {
+    border-radius: 25px;
+    background-color: rgb(65, 1, 126);
+    padding: 2%;
+    margin-bottom: 2%;
+    color: #FFF;
+}
+span {
+    color: #00e7cf;
+    /* font-weight: bold; */
+}
+.var {color: #ffdd00;}
+.pk {color:#75ff1f;}
+.fk {color:rgb(0, 227, 34);}
+.datos {color: rgb(255, 248, 52);}
+
+.creates_script span, .creates_script p {
+    font-family:monospace;
+    font-size: 1.2rem;
+}
+
+.contenedor > a {
+    text-align: center;
+    width: 10%;
+    background-color: #ff00c7;
+    padding: 0.5%;
+    transition: 0.2s ease-in-out;
+}
+
+.contenedor > a:hover {
+    box-shadow: 0px 0px 0px 3px rgb(255, 255, 255);
+    transition: 0.2s ease-in-out;
+}

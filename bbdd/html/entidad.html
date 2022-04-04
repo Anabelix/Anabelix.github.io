@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/modelo.css" type="text/css" rel="stylesheet">
+    <title>Modelo E/R</title>
+</head>
+<body>
+    <header>
+        <span>
+            <h1>BASE DE DATOS DE UNA BIBLIOTECA</h1>
+            <h2>Ana Isabel Pedrajas Navarro - DAW1V</h2>
+        </span>
+        
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Introducción</a></li>
+                <li><a href="../html/entidad.html">Modelo E/R</a></li>
+                <li><a href="../html/relacional.html">Modelo Relacional</a></li>
+                <li><a href="#">Scripts</a>
+                    <ul>
+                        <li><a href="../html/creates.html">Creates</a></li>
+                        <li><a href="../html/inserts.html">Inserts</a></li>
+                        <li><a href="../html/listados.html">Listados</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h1 class="titulo_er">MODELO<br>ENTIDAD RELACION</h1>
+        <div class="txt">
+            <p>Comenzamos este proyecto en la fase de <strong>Análisis de Datos, </strong>modelándolos mediante la elaboración del <strong>Diagrama Entidad Relación.</strong> Esta fase es, dentro de la elaboración de las bases de datos, uno de los pasos más importantes ya que con ella podremos asegurar una buena calidad del diseño. Mediante el modelo conceptual, describimos qué datos deseamos que aparezcan en el sistema y las relaciones que se establecen entre ellos.
+            </p>
+            <p>Antes de continuar, nos gustaría definir los componentes principales del diagrama E/R con el propósito de hacer más comprensible el diseño:</p>
+            <ul>
+                <li><strong>Entidad:</strong> objeto real o abstracto sobre el cual obtendremos información.
+                <ul>
+                    <li>Disponemos de dos tipos de entidades, <strong>regular</strong> (aquella que no depende de ninguna otra entidad y que se representa mediante un rectángulo y su nombre en el interior) y <strong>débil</strong> (aquella que sí depende de otra entidad, se representa mediante dos rectángulos concéntricos y su nombre en el interior).</li>
+                </ul></li>
+                <li><strong>Interrelación:</strong> relación, asociación, correspondencia entre entidades. Se representa mediante un rombo. En nuestro proyecto corresponde a la acción que se ejecuta sobre una o varias entidades.</li>
+                <li><strong>Cardinalidades y tipo de correspondencia:</strong> es el número máximo y mínimo que están relacionadas las entidades y las interrelaciones.
+                </li>
+            </ul>
+            <p>Finalmente, hemos elaborado el diagrama en función de la jerarquía de las entidades presentes. En este caso, las más importantes y que han servido como punto de partida han sido la entidad <strong>EDITORIAL, TEMA y AUTOR,</strong> que daban forma en gran medida a la entidad <strong>LIBRO.</strong></p>
+        </div>
+
+        <iframe title="modelo e/r" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=ER.drawio#R7Z1bd5s6Fsc%2FTdY681AWuiDBo%2BNL67PiJCuXzpx56aIxjT11gscmp818%2BgEDNhLCYBuEcJSH1sZYtuH339raW9q6QP2X359X7nI28afe4gKa098XaHABIUYWCf%2BLjrzHRwCmID7yvJpP42Pm7sD9%2FH9ecmJ69G0%2B9dbJsfhQ4PuLYL5kDz75r6%2FeU8Acc1cr%2Fxd72g9%2FMWUOLN1nL3fg%2Fsld5I%2F%2Bcz4NZrmjX7z58yz9XCv51t%2Fdp5%2FPK%2F%2FtNfmwC4h%2BbP7il1%2FctKHk%2FPXMnfq%2FMofQ8AL1V74fxI9efve9RXRl2Ws2Knh1%2B%2FVW3mtQ5Q0vi0l%2F9BP8%2B%2FJPgL%2Fejn71v47uPsG4lb%2FdxZuX%2FgyyCNu7nKHoOwfvyUUi%2F32LvujlD%2F81%2BLTe3MJeeAKgy5CDy93r4aPn5P9Fev7m1i38FdNQ5nLtDtXwgeul%2B3pSQ8M%2Fh5Pbq97d8D5tMrymcavsJ4WH41%2BXOxxdu%2FQgZL4M3ADjRbcEhC%2F%2Fms0D737pPkWv%2FgrlFV344GWRvPxjvlj0kyv36r960c8LVv5Pr7%2B9nMg0L8EgvOGXzyt3Og9ZEL4h5RolFyIRIaDJ85H7Ml9E%2Bp2ET9beauWml%2Bzef1ttvt4sCEI9Qiu6elZIWfRPdMLaePb954XnLudr48l%2F2bzwtN6cOvoRtxs%2BZFsOpRy481cv%2BqLm9jplYU74%2FttbBd7vzKEE7s%2Be%2F%2BIFq7BpM3n1k01p%2FJ7EDhHHMYgdH%2FqV0bWTCHKWUbWdmpPElDxvm98pKnyQiOoAgSFJAjumIXPqBu6n%2BLzVE%2FPm%2BGZHbxxdFN3mzU3e3mLmBmc%2FpKL0E%2FENxg83d%2BPeVTsi2%2Bip3x%2BNtNL2Ko2wSnOIAQRCowKhEbMhoWHdk%2FENXY0v726U6sS0virqy2b0hSBuX2CWFhjfUO8x7Ky0wLonMGQiTmBW%2BwIjWmB8Qw%2FDSU%2Frq3v6AhjxAlPARaRaYB0JdmiZHTUOo8BsX2W2Vhnf0P1Nf6wHYmcgMIeA9gXmaIHl%2FMTxbagvM4QWmlpsZyI2AGy7fbWlScoMCN702btPniZ3acdGdDX8VTDzn%2F1Xd3Hl%2B8uEiP94QfCe3Df3LfBZXrzf8%2BBf0dsNK3n2V%2BaVwe%2Bk5c2T9%2FTJa%2FgDM2%2BKnv6VfW33ts2z9H3rwF0FvShxmsUsPDaaR9cmecc0PeP7wn%2F6%2BTCbv8aHk5NA%2BqbkJznxq5lnxaiLmZbNcCGz6%2FTjCplIs9Tu6tkL9pyYpFcjYPZKYOUt3GD%2Bt8d8jfpRTjWZ7zmy1jAIrZBXaCk5Laxn7jJ6uJr5L9%2Ffwm98ufRW8%2FD7bkxDcvR2d6jMbrqL%2BXMI2uApvCmb80XWLsPUaBSaViqijXuFoY01zqPR4HJEi03w5iskPxmck8HFkDG4li0epEOBvaWN2Vv40e1tcsbO1G7b%2BICmFle0tKltU8XUohYpNo%2BiGGivoWGvwarIsq0WylgbZG2QD6fYUYvi4vR11r%2F11trx%2FXiOLzCJYwDqbP8qOsHEaopW0gX3ATsO40AYJrFLLO%2FmWUYV2rOoxSbb3YxHUGU9C43kpuVjHSwJKNfuJCdvvfXnm%2BxH2ldQm%2B0rHESYroKyLcbfO2mE08f2W50gmeLsatZbWa68ELwXXzszH8%2BZsZF4EoDQgWksiidKUhbm04407NpIn%2Bg3wNqDZgVGlDiEYRRZu0hzieUM7577njltGZ2w3vdZNi36rB3Rcau1mmYoKVG47ZKZDnnXP%2BvwXbNiKfVMLKWcbFgt6eetn1bzQDsMH8BhsNJev2Tyu1SHQeAfNDkWTB9nbKceCzZmObEkN8MmzrFuRr6x7dBuT2PxTz%2FdZ7Htwi%2FerM8iOU15gOq2fs7W6WnEz9G5HYFQS10copaLU7z2l3VxAlf7N%2Bfv3wAALc7BqT6vqTkHR5SA3GN7d2Z2uDt6uimWZR6zXBYbzI6ZR1rRPCK1zKNoYany5Gk3%2Bmj8mnG3D3Zq%2BcwJArxTe8x7GnKEi9eGMnmVt%2B%2BL%2BZP2Ij6AF8GnVWDB2kq5ToQo%2FcdBl2UCcuOwnXn1wyZyHTtr4zmYCuwo3GtzWdu8y8Q7DmHGggjh%2FaPB8Elu2khaUG%2Fz5KcXPM0y37xDdr2iuc5SZwqo2x48OVtjE4OAXYqbjU1QSA2AAT9XqiQkIvgUwC1eDr1008QEWMiO%2FoVsuw0n1mGFhGUHlHVQXDOrH6Uko5IUOEgtUDUIWIF4KzSE9o54JJV4ZFZyea4fJ9%2FSKhFV%2FZ6wjw145z%2FLceo65Mtb5jycqMcOPa5FL3nhZT6dbsYjIlcpr7I9zpG5%2BWsJ%2FYX73VuEo6ipt%2BKuQPzKtrZsibfVSH6IM%2FjEEXs%2BqYOUFR5syvNB%2BTTm6OZu0nu4KaKvfuSOw6tsobimby99FAizkzaSCR8sMZVSKqkmFXvuH3qDG22JP4IWiAlYLWChJRbVQ2hOC8UVjaVrYTTsf%2Bl9Gw7G%2FfHNtUqSqK%2Bn0JIo6R6IePIKlqkJLHKl6xk8AslhGcQMIEHJ%2BktBVEYPJAtmwNoGYNF1CDEozYVZDh9WYq5IFbarznqpayyJRZMMOxg9MUyTjaAg0%2B62Akqjj1XX0UhUCjEyokjjiynclO6LEh4vGiJfNKJRRXdEoxTmncHXCW0MrgPfEz6laa5FI4TucJ31hiDTGRCH6s5AvttkQgbusG1smCjH%2FsldADABkt4HiKYudlMrbELXwR3XikoaoAaxze0f4KnFTFdQ1zACmAiLimLIUkZZwRaJcaYoB8aXlW04xrTwfgTnG3SVEjxF7JrTzcJ9QaQISI0UFW%2FykQWqdzu8vplo2jpMmyWuXSyXtrJZjdJj9de9vqa6w1Tb4vr3cqkuq4EikerB%2BG7Yl5t90lTXTXXoqSMFsC7e10E61g%2FDq%2BHo5lr7u52mOlrXv7%2BooVTArbIJh3pEpwnfSzhm13UC4Chgt62yAisy3ZHhff9ufKsdko6DDaEYbCRz1mOaNlIB7PH1%2FcP44TECe8%2Fe8Bpt5dDGBHFoWyqgrdAkxt7g8epB%2ByGdZloJc11WBUWquR71rh%2FG2lJ3meoi71ou1VXKpuSy4BmQ2Jus1pphPrNflKA%2FrsIFvNhXuAXvw%2BaQ5LclGGxZ9U3%2F4CwtQobJtVM9w23RfGuSJ3xYVYqxnC3PiQltiudjVkGzprVIEKUzpyzFlGMBy%2BAHladoB1Msak%2B2ekQJTa2e5tSzf%2F3HB9IOqVk7RL52KtSO0dqps%2BfR2olZN2vWjilfOxWqw5yvdmochfD1%2BzoyCuHHDacQTSzSOs9EoVRsPDFsMPx6c%2FWoE1fdihkRyrJsF%2BwgLjVkRBRKyMZwj8aa6i5TbYlnPcqlWqFsbEz1%2BHqsJ9B0G2yAFQC7wnJR7VtLjIgq74%2FTlJCtfXaMdAOVw91xmx9gippr2h%2BvsAxUa0AFDVTewFZZsRB8QgVTrhyq7VTeYKk2qeiEsJaKJKngk6SS61dgvrmmxVIh28wzp2hhsg9TL16hwgP2viIz1AxfBZk6HMcKBRCu3XyJ7aZlUiGtfKRM2q3CoWXSvkyoeUrFeE4b1NqnuaZlUrbwNg799G8G4886LtShuBC31U34g4Ult2leRM1FhRRaDaurcXQdaCTewcB0JBJNFcq53vbG95rn7vJMhAkp25KJs0JZ1t7VuKd57jDPjphnLJNnWD4GPCCuyAZK%2BMHj%2Fh1xK0fysjHAwlFbZnRop6PBeHRoHjE4zAQMiWpDwvLJkocPHZuMN27zrKkMQHhPyJFDRW5WmaithoeHtN5ELhtDUURB2wrASXwFOwdLSEumTsngGiUjaKtpydSb91VPMvkdFYh17jsqqC4ZCuqTjKCtpiVTb%2F5XPclEfprFSKbztbS7Lhls1icZUVtNS6as6LDEofrj5bjfkzvNfxUDImW8vpgvv6bvCR9%2FuWhvk08Z43jAJ6gQFZc9ljqjlCpU9vj6ZnJ5N9SwnyXsWAXYFaqGLDvzq2GXCDtQAXa9Drcjkz%2BVceUxP%2Fy1qGGF1KZ%2F8Fi%2FHmBqcjM8y9pu2M%2B3K2xDq9UhrTpKB7VB8tP5T9KDLX15gF1hJ1qtgSMrNRxe5aSDGsA1awDK1wBUZ0gwvr%2FUa9875PcTh91eEJuWQXZ7D6ZVT1qrtm%2BXVW5ONjAZPzxe6TnIXQYPYbXAU6i8clJ%2FYXKrAe8w4ASpBbhCG65ePX7u3WnAOw64A9UCXKE06Hgwvpn0NN3dpduCQC26VUp6Pk6%2B3fY%2Ba7w7jLdlGlZ%2BV%2Fn28D6senHCR2Fc7%2FSJXny0%2BNhpX5sYGxeO3BwriMM5LUFYCJkqkTxqsoE3DISRi4NjehTwQW2h314S2wvvsPueOW0ZnbDe93NAlZ%2Bzk1T8AfXGEQ%2FLtp6P5uKJoeHFi%2BdjEpw%2BT%2BZjOig9sIt6b569Z5%2FtWzujVVxVxbgmFUPTAIVFGiJNVwzSHy7ktE%2Fc%2B4saFbJzWGL4bIVsEaqVLE%2FJmPUoo0X4dSgZQYOAXDsylMylCqNflPeRm1XyYent81Kylt0xsjNhPbKD%2BS5ThhvMfWz0c2T3nqJ0%2BkfRXNYNBiTbewIjXtmnO08JKsYU1aRibEB71w7kNB2%2B2pSOq%2FygZnV82Pr0s9WxhSGvY0cLWVZ3bDmiuOoRXjAxbJIzCBkh00yZQMdqyiOmFX5ds6o%2BbAl9map5qEumUo5GptmnOfUiVnGUOhfMuBPa%2BBjFKaWwmKE9dwYoJkUbsLAS84SZntRCpY01PM3TyU%2FYGA9y7J%2BeXHsK73yE4KnptbbTZtkOO5JfE2k0arOrpiwHiisP5jEHTaXOnMO2nNYW8tx8EJuLQAPTOaEmMcW4vLWmTV9%2BssNQW76WLZ9lQJ4MahmA5pIurRnC%2FByC8Or0rjU5ohVG0BSQ1MhSY9Nhc35QvIskEbCCGmMln%2Fu%2BDlkBmpVWWXG4iFXYSbaOynYjgQwrf0SGBfxD09KuZYGEHaUhQBXAJZ%2FD2%2BDyqnFp2bjwKS4laMlnnzQtKtBC%2BDlEStCSz3FEbstEs9IqKxZiR%2BAqeLjAzEfO%2FzC1ZWmfFqSk15KPNmsnVwVabG4zBUCEm3pLpiUfc9Zei4q0QFsFWvLhXG1bVKQFOSr4LTqMqyIrDuAz4o4CrOTDuLofUoEW3rIQItyiTy4toCCQq2lRjBYHIgVoycdxdaylfVYck53mZWMFUkRAR3HVpIW3LFSFyBzIR3E1LSrSAkxoG2TvDBfJ5ORjunraQvvc8GOjcAxL1eJGR3fVJCdncQB2DNI6LgqVUuuPR%2FIKTdWF7ocuNYXYxUrpdk0ZmqVuKgJAPvycbtskBqh%2Bao4jRMRaBu6PApA4KG3LZUihbZhue%2BN7bRK7THTYwYqQxjIr7gEgKv%2FVWif%2FOOgNVIK6Pov9YaBGQqipVDsN8yH%2BlrfL%2B3Z7c%2F%2FQu1KJbW2wD2bbErINRMv6GoMbVdgaO3vjIMtRflskdjegPAHV9hQqLozBLh1tg5VCFkq3rE6s1iFrPLcLRdjVbjWt8iShG5wtvcCuqbKJYZqYAAvZm3%2BP3fWO4BM%2BpeFVoajCQucj%2BTcl8C%2FefxHu34BRi6ZW0bBT%2BoHZkGoO%2B5imZSOqHN8d2SilgM6QDS3DsTPIWc2QXfIxTZNdoWi8JvvMyEa2YZEMcvRostl5JECwMWTT%2FFYowK75PTN%2Bo403MvzC4y0zx69gc9%2Bj%2BQ2frvwomLE7feUuZxN%2F6kVn%2FB8%3D"></iframe>
+    </div>
+</body>
+</html>

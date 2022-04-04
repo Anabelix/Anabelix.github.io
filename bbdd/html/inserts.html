@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/creates.css" type="text/css" rel="stylesheet">
+    <title>Inserts</title>
+</head>
+<body>
+    <header>
+        <span>
+            <h1>BASE DE DATOS DE UNA BIBLIOTECA</h1>
+            <h2>Ana Isabel Pedrajas Navarro - DAW1V</h2>
+        </span>
+        
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Introducción</a></li>
+                <li><a href="../html/entidad.html">Modelo E/R</a></li>
+                <li><a href="../html/relacional.html">Modelo Relacional</a></li>
+                <li><a href="#">Scripts</a>
+                    <ul>
+                        <li><a href="../html/creates.html">Creates</a></li>
+                        <li><a href="../html/inserts.html">Inserts</a></li>
+                        <li><a href="../html/listados.html">Listados</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h1>INSERTS</h1>
+        <div class="txt">
+            <p>El siguiente código corresponde a <strong>las inserciones de datos en las tablas.</strong></p>
+            <p>
+                Para poder visualizar mejor la propagación de claves y obtener informes más interesantes, se han repetido datos en las claves ajenas. Finalmente, hay que mencionar que para evitar errores de procesamiento por incompatibilidad de lenguaje y no reconocimiento de ciertos caracteres, se han eliminado las tildes y la letra ñ.
+            </p>
+            <p>
+                Todos los datos que se han introducido respetan <strong>las normas de sintaxis</strong> es decir, los datos de tipo VARCHAR2 y las fechas se encuentran entre comillas simples, mientras que los números van sin comillas. Todos los datos se separan por comas.
+            </p>
+            <p>
+                Se debe destacar que al no especificar en nuestra sentencia las columnas a las que introduciremos los datos, se ha mantenido el mismo orden que hay en los scripts de la creación de tablas. Para un mayor visionado de esta fase del proyecto, se han dejado algunos comentarios mediante la palabra reservada REM.
+            </p> 
+            <p>Por último, tras finalizar la inserción de los datos de una tabla se ha escrito la sentencia <strong>COMMIT</strong> con la que poder dejar fija toda esta información en la base de datos y de este modo, evitar cargar las tablas cada vez que iniciemos sesión en el sistema. 
+            </p>
+            <a href="../scripts/INSERT.sql" id="enlace">Enlace al script INSERT</a>
+        </div>
+        <a href="#inst01">EDITORIAL</a>
+        <a href="#inst02">TEMA</a>
+        <a href="#inst03">AUTOR</a>
+        <a href="#inst04">LIBRO</a>
+        <a href="#inst05">ESCRITO</a>
+        <a href="#inst06">EJEMPLARES</a>
+        <a href="#inst07">TIPO_SOCIO</a>
+        <a href="#inst08">SOCIO</a>
+        <a href="#inst08">PRESTAMO</a>
+        <div class="creates_script">
+            <p id="inst01">
+                REM ******* INSERTAR DATOS EN EDITORIAL ******<br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'GP001', 'GRUPO EDELVIVES', 'ESPANA', 'BARCELONA', 08001</span>);
+                <br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'PR002', 'PENGUIN RANDOM', 'ESPANA', 'BADAJOZ', 06001</span>);<br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'AN003', 'GRUPO ANAYA', 'ESPANA', 'BARCELONA', 08002</span>);<br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'PF004', 'EDICIONES PARANINFO', 'ESPANA', 'MADRID', 28001</span>);<br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'TC005', 'TASCHEN', 'ALEMANIA', 'COLONIA', 50667</span>);<br>
+                INSERT INTO <span>EDITORIAL</span> VALUES (<span class="datos">'BV006', 'EL BARCO DE VAPOR', 'ESPANA', 'MADRID', 28002</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst02">
+                REM ******* INSERTAR DATOS EN TEMA ******<br>
+                INSERT INTO <span>TEMA</span> VALUES (<span class="datos">'IDM01','IDIOMA','P-2'</span>);
+                <br>
+                INSERT INTO <span>TEMA</span> VALUES (<span class="datos">'INF01','INFORMATICA','P-0'</span>);<br>
+                INSERT INTO <span>TEMA</span> VALUES (<span class="datos">'NTV01','NARRATIVA','P-1'</span>);<br>
+                INSERT INTO <span>TEMA</span> VALUES (<span class="datos">'TR001','TERROR','P-1'</span>);<br>
+                INSERT INTO <span>TEMA</span> VALUES (<span class="datos">'ART01','ARTE','P-3'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst03">
+                REM ******* INSERTAR DATOS EN AUTOR ******<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001ML','Manel Loureiro', 'Espana', 'null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001WB', 'William Peter Blatty', 'EEUU', 'null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001RL','Robert Lawrence Stine', 'EEUU', 'null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001SM','Stephenie Meyer', 'EEUU','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001LK','Lauren Kate', 'EEUU','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001GS','Geronimo Stilton', 'Espana','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'01RMA','Rodrigo Munoz Avia', 'Espana','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'01JMG','Joan Manuel Gisbert', 'Espana','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001JD','Juan Diego Gauchat', 'Espana','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001AJ','Alfonso Jimenez Marin', 'Espana','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001FP','Franciso Manuel Perez Montes', 'Espana','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001GG','Juan Garcia Garcia', 'Espana','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001EG','E.H. Gombrich', 'Austria','Gombrich'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001MH','Magdalena Holzhey', 'Alemania','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001TN','Tobias G. Natter', 'Austria','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001TL','Thyerry Laplanche','Francia','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001SL','Sun-mi Lee','Corea del Sur','null'</span>);<br><br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'01MHM','Martin Hewings Martin','EEUU','null'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001RM','Raymond Murphy','EEUU','R.Murphy'</span>);<br>
+                INSERT INTO <span>AUTOR</span> VALUES (<span class="datos">'001FG','Fernando Garcia Clemente','Espana','null'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst04">
+                REM ******* INSERTAR DATOS EN LIBRO ******<br>
+                ALTER SESSION SET NLS_DATE_FORMAT='DD/MM/YYYY';<br>
+
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'001AZ','Apocalipsis Z:1','17/07/2007','Barcelona','Castellano',432, 'GP001','TR001'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'002AZ','Apocalipsis Z:2','15/01/2010','Barcelona','Castellano',384, 'GP001','TR001'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'003AZ','Apocalipsis Z:3','06/05/2011','Barcelona','Castellano',480, 'GP001','TR001'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'006EE','El exorcista','25/03/2009','Cuenca', 'Castellano', 416,'PR002', 'TR001'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'009SM','Sangre de monstruo', '01/05/1996', 'Madrid', 'Castellano', 143, 'GP001', 'TR001'</span>);<br><br>
+
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'002TW','Twilight','05/10/2005','Cuenca','Ingles',512, 'PR002','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'003NM','New Moon','01/01/2007','Cuenca','Ingles',497, 'PR002','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'004EC','Eclipse','17/10/2010','Cuenca','Ingles',559, 'PR002','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'006OS','Oscuros','15/07/2010','Cuenca','Castellano',416, 'PR002','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'10QVS','¡Que vacaciones tan superratonicas!','15/07/2008','Madrid','Castellano',117, 'BV006','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'11SMR','La sonrisa de Mona Ratisa','23/04/2008','Madrid','Castellano',119, 'BV006','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'12LCP','La casa del panico','10/10/2005','Madrid','Castellano',170, 'BV006','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'13HSE','Historias secretas del espacio','10/03/2005','Madrid','Castellano',150, 'BV006','NTV01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'014LP','Los perfectos','03/06/2007','Madrid','Castellano',202, 'BV006','NTV01'</span>);<br>
+
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'02HCJ','El gran libro de HTML5, CSS3 y Javascript','12/04/2019','Madrid','Castellano',640,'PF004', 'INF01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'03APJ','Aprende a Programar con Java','11/03/2016','Cuenca','Castellano',402,'PR002', 'INF01'</span>);<br><br>
+            
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'002CB','Coreano basico','19/02/2021','Barcelona','Castellano',360,'GP001', 'IDM01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'06EGU','Essential Grammar in Use', '15/06/2016', 'Barcelona','Ingles',328,'GP001', 'IDM01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'07AGU','Advanced Grammar in Use', '31/07/2015', 'Barcelona','Ingles',304,'GP001', 'IDM01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'08EGU','English Grammar in Use', '24/12/2019', 'Barcelona','Ingles',396,'GP001', 'IDM01'</span>);<br><br>
+
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'001HA','La Historia del Arte','10/09/2013','Barcelona','Castellano',688,'AN003','ART01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'003DC','De Chirico','17/07/2017','Madrid','Castellano',96,'TC005','ART01'</span>);<br>
+                INSERT INTO <span>LIBRO</span> VALUES (<span class="datos">'004GK','Gustav Klimt','10/09/2013','Madrid','Castellano',604,'TC005','ART01'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst05">
+                REM ******* INSERTAR DATOS EN ESCRITO ******<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001ML','001AZ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001ML','002AZ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001ML','003AZ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001WB','006EE'</span>);<br><br>
+
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001SM','002TW'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001SM','003NM'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001SM','004EC'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001LK','006OS'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001GS','10QVS'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001GS','11SMR'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'01JMG','13HSE'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'01RMA','014LP'</span>);<br><br>
+                
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001JD','02HCJ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001GG','02HCJ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001AJ','03APJ'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001FP','03APJ'</span>);<br><br>
+
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001TL','002CB'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001SL','002CB'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001RM','06EGU'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001FG','06EGU'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'01MHM','07AGU'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001RM','08EGU'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001FG','08EGU'</span>);<br><br>
+
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001EG','001HA'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001MH','003DC'</span>);<br>
+                INSERT INTO <span>ESCRITO</span> VALUES (<span class="datos">'001TN','004GK'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst06">
+                REM ******* INSERTAR DATOS EN EJEMPLARES ******<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001AZ', 01, 'Papel', 'null', '17/07/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001AZ', 02, 'Papel', 'Pintado', '17/07/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001AZ', 03, 'Papel', 'null', '17/07/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001AZ', 04, 'Papel', 'null', '17/07/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002AZ', 01, 'Papel', 'Roto', '17/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002AZ', 02, 'Papel', 'null', '17/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002AZ', 03, 'Papel', 'null', '17/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002AZ', 04, 'Papel', 'Falta la pagina 13', '17/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003AZ', 01, 'Papel', 'null', '06/05/2011'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003AZ', 02, 'Papel', 'null', '06/05/2011'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'006EE', 01, 'Papel', 'null', '25/03/2009'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'006EE', 02, 'Papel', 'Falta la pagina 15', '25/03/2009'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'009SM', 02, 'Papel', 'Falta la pagina 15', '25/03/2009'</span>);<br><br>
+
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002TW', 01, 'Papel', 'null','05/10/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002TW', 02, 'Papel', 'null', '05/10/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002TW', 03, 'Papel', 'Subrayado en varias paginas', '05/10/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002TW', 04, 'Papel', 'null', '05/10/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002TW', 05, 'Papel', 'null', '05/10/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003NM', 01, 'Papel', 'null', '01/01/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003NM', 02, 'Papel', 'Dibujos en pagina 23', '01/01/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003NM', 03, 'Digital', 'null', '01/01/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'004EC', 01, 'Papel', 'null', '01/01/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'004EC', 02, 'Digital', 'null', '01/01/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'006OS', 01, 'Papel', 'null', '15/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'006OS', 02, 'Papel', 'null', '15/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'006OS', 03, 'Papel', 'Ultimas paginas despegadas', '15/07/2010'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'10QVS', 01, 'Papel', 'Dibujos en pagina 12', '15/07/2008'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'10QVS', 02, 'Papel', 'null', '15/07/2008'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'11SMR', 01, 'Papel', 'null', '23/04/2008'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'11SMR', 02, 'Papel', 'Dibujos en pagina 40', '23/04/2008'</span>);<br><br>
+
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'13HSE', 01, 'Papel', 'Contraportada rayada', '10/03/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'13HSE', 02, 'Papel', 'null', '10/03/2005'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'014LP', 01, 'Papel', 'Contraportada y portada rayada', '03/06/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'014LP', 02, 'Papel', 'Pagina 32 rota', '03/06/2007'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'014LP', 03, 'Papel', 'null', '03/06/2007'</span>);<br><br>
+
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'02HCJ', 01, 'Papel', 'null', '12/04/2019'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'03APJ', 01, 'Papel', 'null', '11/03/2016'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'03APJ', 02, 'Papel', 'null', '11/03/2016'</span>);<br><br>
+
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002CB', 01, 'Papel', 'null', '19/02/2021'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002CB', 02, 'Papel', 'Falta el CD 2', '19/02/2021'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002CB', 03, 'Papel', 'null', '19/02/2021'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002CB', 04, 'Papel', 'Falta el CD 1', '19/02/2021'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'002CB', 05, 'Papel', 'null', '19/02/2021'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'06EGU', 01, 'Papel', 'Falta el CD 1', '15/06/2016'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'06EGU', 02, 'Digital', 'null', '15/06/2016'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'06EGU', 03, 'Papel', 'null', '15/06/2016'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'07AGU', 01, 'Papel', 'null', '31/07/2015'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'07AGU', 02, 'Digital', 'null', '31/07/2015'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'08EGU', 01, 'Papel', 'Algunos ejercicios resueltos a boligrafo', '24/12/2019'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'08EGU', 02, 'Papel', 'null', '24/12/2019'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'08EGU', 03, 'Digital', 'null', '24/12/2019'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'08EGU', 04, 'Digital', 'null', '24/12/2019'</span>);<br><br>
+
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001HA', 01, 'Papel', 'null', '10/09/2013'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'001HA', 02, 'Papel', 'null', '10/09/2013'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003DC', 01, 'Papel', 'null', '17/07/2017'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003DC', 02, 'Papel', 'null', '17/07/2017'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'003DC', 03, 'Papel', 'null', '17/07/2017'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'004GK', 01, 'Papel', 'null', '10/09/2013'</span>);<br>
+                INSERT INTO <span>EJEMPLARES</span> VALUES (<span class="datos">'004GK', 02, 'Papel', 'null', '10/09/2013'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst07">
+                REM ******* INSERTAR DATOS EN TIPO_SOCIO ******<br>
+                INSERT INTO <span>TIPO_SOCIO</span> VALUES (<span class="datos">'INFA1','INFANTIL'</span>);<br>
+                INSERT INTO <span>TIPO_SOCIO</span> VALUES (<span class="datos">'ADUL2','ADULTO'</span>);<br>
+                INSERT INTO <span>TIPO_SOCIO</span> VALUES (<span class="datos">'INST3','INSTITUCIONAL'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst08">
+                REM ******* INSERTAR DATOS EN TIPO_SOCIO ******<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S1', 'Ramirez, Alicia', '12/01/1955', 'Calle Pluton', '686860657', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S2', 'Martinez, Manolo', '05/05/1945', 'Calle Florida', '686850656', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S3', 'Martinez, Marina', '12/06/1987', 'Calle Sol', '684060656', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S4', 'Grados, Juan', '12/12/1999', 'Calle Luna', '623360656', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S5', 'Garcia, Pedro', '12/11/1998', 'Calle Sol', '654607977', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S6', 'Martin, Luis', '12/12/1967', 'Calle Roma', '693345454', 'ADUL2'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S7', 'Galan, Ramon', '12/12/1967', 'Calle Atenas', '693345654', 'ADUL2'</span>);<br><br>
+
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S8', 'Hernandez, Alejandro', '12/10/1995', 'Calle Torrevieja', '691221534', 'INST3'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'000S9', 'Martin, Guillermo', '12/12/1970', 'Calle Saturno', '748117058', 'INST3'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'00S10', 'Chanza, Javier', '12/12/2000', 'Calle Saturno', '748117058', 'INST3'</span>);<br><br>
+
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'00S11', 'Chanza, Mario', '12/12/2012', 'Calle Pluton', '748117058', 'INFA1'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'00S12', 'Perez, Ruth', '12/12/2012', 'Calle Pluton', '651081722', 'INFA1'</span>);<br>
+                INSERT INTO <span>SOCIO</span> VALUES (<span class="datos">'00S13', 'Benavente, Fabricio', '12/12/2015', 'Calle Milan', '659106617', 'INFA1'</span>);<br>
+                COMMIT;
+            </p>
+            <p id="inst09">
+                REM ******* INSERTAR DATOS EN PRESTAMO ******<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '001AZ', '000S1', '02/03/2022', '02/04/2022', '25/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">03, '002AZ', '000S1', '02/03/2022', '02/04/2022', '25/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '003AZ', '000S1', '02/03/2022', '02/04/2022', '25/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">03, '002TW', '000S2', '15/02/2022', '15/03/2022', '02/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '003NM', '000S2', '15/02/2022', '15/03/2022', '02/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '004EC', '000S2', '15/02/2022', '15/03/2022', '02/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '03APJ', '000S6', '15/02/2022', '15/03/2022', '10/03/2022'</span>);<br><br>
+
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '002AZ', '000S3', '21/02/2022', '21/03/2022', '25/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '08EGU', '000S8', '25/02/2022', '25/03/2022', '30/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '07AGU', '00S11', '25/02/2022', '25/03/2022', '01/04/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">03, '06EGU', '000S9', '25/02/2022', '25/03/2022', '12/04/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '001HA', '00S10', '28/02/2022', '28/03/2022', '31/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '003DC', '00S10', '28/02/2022', '28/03/2022', '12/05/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '004GK', '00S10', '28/02/2022', '28/03/2022', '25/04/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '006OS', '00S12', '28/02/2022', '28/03/2022', '22/06/2022'</span>);<br><br>
+
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '002CB', '000S7', '10/01/2022', '10/02/2022', '05/02/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '002CB', '000S4', '15/01/2022', '15/02/2022', '12/02/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">03, '002CB', '000S3', '22/02/2022', '22/03/2022', '21/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '002CB', '000S6', '07/03/2022', '07/04/2022', '13/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">04, '002CB', '000S1', '28/01/2022', '28/02/2022', '27/02/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '11SMR', '00S13', '17/02/2022', '17/03/2022', '28/02/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">01, '11SMR', '00S12', '01/03/2022', '01/04/2022', '12/03/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '11SMR', '00S11', '20/03/2022', '20/04/2022', '12/04/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">02, '002AZ', '000S2', '10/02/2022', '10/03/2022', '25/02/2022'</span>);<br>
+                INSERT INTO <span>PRESTAMO</span> VALUES (<span class="datos">04, '002AZ', '000S6', '10/02/2022', '10/03/2022', '25/02/2022'</span>);<br>
+                COMMIT;
+            </p>
+        </div>
+    </div>
+</body>
+</html>

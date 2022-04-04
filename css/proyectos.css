@@ -31,7 +31,10 @@ main section:hover {
 video {
     background-color: black;
 }
-
+#img00 {
+    background-image: url(../bbdd/img/bck.png);
+    background-color: #14021c;
+}
 #img01 {
     background-image: url(../img/primos.png);
 }
