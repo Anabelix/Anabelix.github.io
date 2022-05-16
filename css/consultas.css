@@ -1,0 +1,180 @@
+.contenedor {
+    width: 70%;
+}
+
+/*MENU*/
+#menu_consultas {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: space-around;
+    width:100%;
+    margin:2% 0 2% 0;
+}
+
+#menu_consultas li {
+    padding: 1%;
+    margin-right: 2%;
+    background-color: #0066FF;
+    border-radius: 15px;
+    width:40%;
+    text-align: center;
+}
+
+.contenedor > #menu_consultas a, #menu_consultas a:first-of-type {
+    text-decoration: none;
+    color:#FFF;
+}
+#menu_consultas li:last-of-type {
+    margin: 0;
+}
+
+/*GENERAL*/
+main div {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 3%;
+    margin-bottom: 2%;
+}
+
+h2 {
+    color: #0066FF;
+    font-size: 25px;
+
+}
+
+h2, div p {
+    margin-bottom: 2%;
+}
+
+/*CONSULTA 1*/
+main > div > ul > li {
+    text-align: justify;
+    width: 100%;
+    padding: 0.5%;
+    margin-bottom: 0.5%;
+}
+main > div > ul > li:nth-child(odd) {
+    background-color: #c8deff56;
+}
+main > div > ul > li:nth-child(even) {
+    background-color: #ffc8f66e;
+}
+
+/*CONSULTA 2*/
+main div > div {
+    background-color: rgba(231, 14, 184, 0.11);
+}
+
+main div > div > name {
+    color:rgb(255, 52, 211);
+    font-weight: 600;
+}
+
+/*CONSULTA 3*/
+div:nth-of-type(3) ol {
+    margin-bottom: 2%;
+    text-align: center;
+}
+div:nth-of-type(3)  li {
+    padding: 1%;
+    list-style: none;
+    background-color: #0066ff48;
+}
+div:nth-of-type(3) li:first-of-type {
+    margin-top: -1%;
+}
+div:nth-of-type(3) li::first-line {
+    font-weight: 600;
+    color:rgb(72, 52, 255);
+}
+div:nth-of-type(3) ol p {
+    color: black;
+    font-weight: 600;
+}
+
+div:nth-of-type(3) ol p:first-of-type {
+    border-bottom: 2px solid #0066FF;
+    font-size: 20px;
+}
+div:nth-of-type(3) ol p:last-of-type {
+    margin: 1% 0 0 0;
+}
+
+/*CONSULTA 4*/
+img {
+    width: 100%;
+}
+table {
+    font-size: 13px;
+    border-collapse: collapse;
+    text-align: center;
+}
+td {
+    border: 3px solid rgb(255, 255, 255);
+    padding: 1%;
+}
+
+td:nth-of-type(1) {
+    background-color:#0066FF;
+    color: #FFF;
+}
+
+td:last-of-type {
+    padding: 0;
+}
+
+/*CONSULTA 5*/
+div:nth-of-type(5) > div {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    padding: 0;
+}
+div:nth-of-type(5) > div p:nth-of-type(odd) {
+    background-color: #78adfd56;
+    border: 1px solid #78adfd;
+    padding: 2%;
+}
+
+div:nth-of-type(5) > div p:nth-of-type(even) {
+    background-color: #ffc8f66e;
+    border: 1px solid #faa8ec;
+    padding: 2%;
+}
+div:nth-of-type(5) > div p::first-line {
+    font-style: italic;
+    color:#001f4b
+}
+div:nth-of-type(5) span {
+    margin-left: 0;
+    color:#001f4b;
+}
+
+/*CONSULTA 6*/
+div:nth-of-type(6) ol {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+div:nth-of-type(6) li {
+    width: 90%;
+    margin-bottom: 2%;
+    border-left: 2px solid #0066FF;
+}
+
+div:nth-of-type(6) li > * {
+    margin-left: 2%;
+    text-align: justify;
+}
+main div:nth-of-type(6) a:first-of-type, li a, li categoria{
+    color:#0066FF;
+    font-weight: 600;
+}
+
+main div:nth-of-type(6) li p {
+    background-color: #ffffff;
+    padding: 2%;
+    margin-top: 1%;
+}

@@ -89,11 +89,14 @@ header nav a {
     text-decoration: none; 
     color: black;
 }
+nav li:first-child {
+    background-color: #0066FF;
+}
 nav li:last-child{
     margin-right: 0; 
     background-color: #000;
 }
-nav li:last-child a:last-child {
+nav li:last-child a:last-child, li:first-child a:first-child {
     color: #FFF;
 }
 nav li:hover {background-color: rgba(255, 255, 255, 1);}
@@ -105,6 +108,13 @@ nav li:last-child:hover a:last-child {
 nav li:last-child:hover {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: inset 0px 0px 0px 3px #000;
+}
+nav li:first-child:hover a:first-child {
+    color: #003380;
+}
+nav li:first-child:hover {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: inset 0px 0px 0px 3px #0066FF;
 }
 
 /*-------------------------------------CUERPO-----------------------------------------*/
